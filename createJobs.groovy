@@ -6,3 +6,12 @@ pipelineJob('pipelineJob') {
         }
     }
 }
+
+pipelineJob('pipelineJob1') {
+    definition {
+        cps {
+            script(readFileFromWorkspace('pipelineJob1.groovy'))
+            sandbox()
+        }
+    }
+}
